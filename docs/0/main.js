@@ -1,6 +1,6 @@
 window.addEventListener('load', (event) => {
     setupToast();
     setupCopy();
-    parseMarkdown();
+    parseMarkdown(md_url='/0/index.md');
 });
 
