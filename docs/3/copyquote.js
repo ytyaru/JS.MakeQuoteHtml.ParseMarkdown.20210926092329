@@ -12,7 +12,7 @@ function copyQuote(dom_sel = 'body', onNotification = null) {
                 if(window.getSelection().anchorOffset != window.getSelection().focusOffset) {
                     navigator.clipboard.writeText(makeBlockquoteString()).then(e => {
                         if (onNotification == null) { alert('引用HTMLをコピーしました'); }
-                        else { onNotification(); }
+                        else { console.log('onNotification != null'); onNotification(); }
                     });
                 }
             });
