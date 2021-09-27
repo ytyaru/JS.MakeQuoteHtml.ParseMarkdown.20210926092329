@@ -2,8 +2,7 @@ window.addEventListener('load', (event) => {
     setupToast();
     copyQuote(
         dom_sel = 'body', 
-        onNotification=function(){
-            console.log('引用HTMLをコピーしました');
+        onNotification=()=>{
             iziToast.success({title: '引用HTMLをコピーしました', message: 'あなたのサイトにペーストしてください'});
         }
     );
