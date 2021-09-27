@@ -11,7 +11,7 @@ function copyQuote(dom_sel = 'body', onNotification = null) {
             target.addEventListener('mouseup', function(event) {
                 if(window.getSelection().anchorOffset != window.getSelection().focusOffset) {
                     navigator.clipboard.writeText(makeBlockquoteString()).then(e => {
-                        if (onNotification == null) { alert('引用HTMLをコピーしました'); }
+                        if (onNotification == null) { console.log('onNotification == null'); alert('引用HTMLをコピーしました'); }
                         else { console.log('onNotification != null'); onNotification(); }
                     });
                 }
@@ -26,16 +26,5 @@ function copyQuote(dom_sel = 'body', onNotification = null) {
             });
         });
     }
-    function parseMarkdown(md_url = '/index.md', dom_sel = 'body', is_log = false) {
-        fetch(md_url)
-        .then(response => response.text())
-        .then(data => {
-            window["markdown"].ready.then(markdown => {
-                md = markdown.parse(data)
-                document.querySelector(dom_sel).innerHTML = md
-                if (is_log) { console.log(md) }
-            })
-        });
-    }
-
+    setupCopy();
 }
