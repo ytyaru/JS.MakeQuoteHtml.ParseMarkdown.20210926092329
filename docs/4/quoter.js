@@ -6,7 +6,7 @@ function quoter(selector = 'body', onCopy = null) {
 </blockquote>`
     }
     function setupCopy() {
-        target = document.querySelector(dom_sel);
+        target = document.querySelector(selector);
         target.addEventListener('selectstart', function(){
             target.addEventListener('mouseup', function(event) {
                 if(window.getSelection().anchorOffset != window.getSelection().focusOffset) {
