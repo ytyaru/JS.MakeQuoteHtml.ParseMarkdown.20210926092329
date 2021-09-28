@@ -6,6 +6,6 @@ window.addEventListener('load', (event) => {
             iziToast.success({title: '引用HTMLをコピーしました', message: 'あなたのサイトにペーストしてください'});
         }
     );
-    parseMarkdown(md_url='/JS.MakeQuoteHtml.ParseMarkdown.20210926092329/3/index.md');
+    parseMarkdown(md_url='/JS.MakeQuoteHtml.ParseMarkdown.20210926092329/content.md');
 });
 
