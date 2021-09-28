@@ -4,7 +4,7 @@ function parseMarkdown(url = '/content.md', selector = 'body', is_log = false) {
     .then(data => {
         window["markdown"].ready.then(markdown => {
             html_txt = markdown.parse(data)
-            document.querySelector(dom_sel).innerHTML = html_txt
+            document.querySelector(selector).innerHTML = html_txt
             if (is_log) { console.log(html_txt) }
         })
     });
