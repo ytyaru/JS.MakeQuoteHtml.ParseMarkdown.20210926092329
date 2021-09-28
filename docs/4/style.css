@@ -1,0 +1,44 @@
+@charset "utf-8";
+* {
+    --font-size-S: calc(100vw / 80); /* 1行80字 */
+    --font-size-M: calc(100vw / 40); /* 1行40字 */
+    --font-size-L: calc(100vw / 25); /* 1行25字 */
+}
+@media screen and (max-width: 800px) {
+* {
+    --font-size-S: calc(100vw / 40); /* 1行40字 */
+    --font-size-M: calc(100vw / 25); /* 1行25字 */
+    --font-size-L: calc(100vw / 20); /* 1行20字 */
+}
+}
+p, span, li, a , th, td, time{
+    font-size: var(--font-size-M);
+}
+pre {
+    white-space: pre-wrap;
+    background-color: #EEEEEE;
+}
+h1 {
+    font-size: var(--font-size-L);
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+h2 {
+    font-size: var(--font-size-L);
+    border-bottom: solid 1vw orange;
+}
+h3 {
+    font-size: var(--font-size-L);
+    border-bottom: double 1vw orange;
+}
+h4 {
+    font-size: var(--font-size-M);
+    border-bottom: solid 0.5vw orange;
+}
+h5 {
+    font-size: var(--font-size-M);
+    border-bottom: double 0.5vw orange;
+}
+h6 {
+    font-size: var(--font-size-M);
+}
+
